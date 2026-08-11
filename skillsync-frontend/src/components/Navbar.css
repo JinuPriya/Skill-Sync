@@ -1,0 +1,143 @@
+.navbar {
+  height: 70px;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+
+  position: relative;
+  z-index: 100;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.navbar-logo-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: block;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-links a {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.navbar-links a:hover {
+  color: var(--primary);
+}
+
+.logout-button {
+  border: none;
+  background: none;
+
+  color: var(--text-secondary);
+
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  color: var(--error);
+}
+
+.navbar-toggle {
+  display: none;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.navbar-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    position: relative;
+    padding: 0 24px;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+
+    padding: 20px 24px 28px;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .logout-button {
+    text-align: left;
+  }
+}
+
+.admin-nav-link {
+  color: var(--primary) !important;
+  font-weight: 700 !important;
+}

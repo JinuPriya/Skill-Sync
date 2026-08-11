@@ -1,0 +1,144 @@
+.admin-users-page {
+  min-height: calc(100vh - 60px);
+  padding: 40px;
+  background-color: var(--background);
+}
+
+.admin-users-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.admin-users-container h1 {
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.admin-page-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.admin-users-search {
+  width: 100%;
+  max-width: 320px;
+
+  padding: 10px 14px;
+  margin-bottom: 20px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.admin-users-table {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.admin-users-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1.6fr 0.6fr 0.7fr 0.8fr 0.8fr;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+
+  font-size: 14px;
+}
+
+.admin-users-row:last-child {
+  border-bottom: none;
+}
+
+.admin-users-header {
+  background-color: var(--background);
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.admin-users-email {
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-role-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.admin-blocked-badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--error);
+}
+
+.admin-active-badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--success);
+}
+
+.admin-block-button,
+.admin-approve-button {
+  padding: 6px 14px;
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.admin-block-button {
+  background-color: var(--surface);
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+
+.admin-approve-button {
+  background-color: var(--success);
+  color: #fff;
+}
+
+.admin-block-button:disabled,
+.admin-approve-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+@media (max-width: 800px) {
+  .admin-users-row {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 6px;
+  }
+}
+
+.admin-report-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+
+  border-radius: 999px;
+
+  background-color: var(--background);
+  color: var(--text-secondary);
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.admin-report-count-high {
+  background-color: #fdecea;
+  color: var(--error);
+}

@@ -1,0 +1,94 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(17, 24, 39, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 100;
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 420px;
+
+  background-color: var(--surface);
+
+  padding: 30px;
+
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.modal-card h3 {
+  margin-bottom: 20px;
+}
+
+.modal-card .form-group {
+  margin-bottom: 18px;
+}
+
+.modal-card label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.modal-card select,
+.modal-card input,
+.modal-card textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  resize: vertical;
+}
+
+.modal-subtext {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.report-submit-button {
+  padding: 10px 20px;
+
+  background-color: var(--error);
+  color: #fff;
+
+  border: none;
+  border-radius: var(--radius-md);
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.report-submit-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.modal-cancel {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.modal-cancel:hover {
+  color: var(--error);
+}
+

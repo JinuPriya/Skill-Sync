@@ -1,0 +1,111 @@
+.admin-certs-page {
+  min-height: calc(100vh - 60px);
+  padding: 40px;
+  background-color: var(--background);
+}
+
+.admin-certs-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.admin-certs-container h1 {
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.admin-page-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.admin-empty-text {
+  color: var(--text-secondary);
+}
+
+.admin-cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.admin-cert-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+
+.admin-cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.admin-cert-header h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.admin-cert-meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.admin-cert-level {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: var(--background);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.admin-cert-link {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.admin-cert-none {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.admin-cert-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-approve-button,
+.admin-reject-button {
+  flex: 1;
+  padding: 9px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.admin-approve-button {
+  background-color: var(--success);
+  color: #fff;
+}
+
+.admin-reject-button {
+  background-color: var(--surface);
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+
+.admin-approve-button:disabled,
+.admin-reject-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

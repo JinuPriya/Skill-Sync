@@ -1,0 +1,450 @@
+.home-page {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.home-page h1,
+.home-page h2,
+.home-page h3 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+/* ---------- HERO ---------- */
+
+.hero-outer {
+  background: linear-gradient(180deg, #f5f4ff 0%, var(--background) 100%);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+
+  max-width: 1280px;
+  margin: 0 auto;
+
+  padding: 80px 60px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--secondary);
+  margin-bottom: 18px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+
+  background: linear-gradient(100deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  margin-bottom: 22px;
+}
+
+.hero-subtitle {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 36px;
+}
+
+.cta-button {
+  display: inline-block;
+
+  padding: 14px 32px;
+
+  background: linear-gradient(100deg, var(--primary), var(--secondary));
+  color: #fff;
+
+  font-weight: 600;
+  font-size: 16px;
+
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+}
+
+/* ---------- HERO VISUAL ---------- */
+
+.hero-visual {
+  flex: 1;
+  max-width: 500px;
+
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+}
+
+.hero-visual::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+
+  width: 220px;
+  height: 220px;
+
+  background: radial-gradient(circle, var(--primary), transparent 70%);
+  opacity: 0.18;
+  filter: blur(10px);
+
+  z-index: 0;
+}
+
+.hero-visual::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+
+  width: 220px;
+  height: 220px;
+
+  background: radial-gradient(circle, var(--secondary), transparent 70%);
+  opacity: 0.18;
+  filter: blur(10px);
+
+  z-index: 0;
+}
+
+.hero-image {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+
+  display: block;
+}
+
+.swap-line {
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.swap-line-a {
+  stroke: var(--primary);
+  fill: var(--primary);
+}
+
+.swap-line-b {
+  stroke: var(--secondary);
+  fill: var(--secondary);
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+/* ---------- HOW IT WORKS ---------- */
+
+.how-it-works {
+  padding: 90px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.steps-track {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.step {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  margin-bottom: 16px;
+
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--primary);
+
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.step h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.step p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.step-connector {
+  position: absolute;
+  top: 12px;
+  right: -28px;
+
+  color: var(--border);
+  font-size: 20px;
+}
+
+/* ---------- ROLES ---------- */
+
+.roles-section {
+  padding: 90px 40px;
+  background-color: var(--surface);
+}
+
+.roles-grid {
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.role-card {
+  flex: 1;
+
+  padding: 36px;
+
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.role-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.role-tagline {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.role-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.role-card li {
+  padding-left: 20px;
+  position: relative;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.role-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--spark);
+}
+
+.role-divider {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- SKILLS ---------- */
+
+.skills-section {
+  padding: 90px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.skill-tile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 22px 24px;
+
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  font-weight: 500;
+
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.skill-tile:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+}
+
+.skill-emoji {
+  font-size: 26px;
+}
+
+/* ---------- FINAL CTA ---------- */
+
+.final-cta {
+  text-align: center;
+  padding: 100px 20px;
+
+  background: linear-gradient(100deg, var(--primary), var(--secondary));
+  color: #fff;
+}
+
+.final-cta h2 {
+  font-size: 34px;
+  line-height: 1.3;
+  margin-bottom: 34px;
+}
+
+.final-cta .cta-button {
+  background: #fff;
+  color: var(--primary);
+  box-shadow: none;
+}
+
+.final-cta .cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- FOOTER ---------- */
+
+.home-footer {
+  text-align: center;
+  padding: 50px 20px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.footer-logo {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-copyright {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+/* ---------- REDUCED MOTION ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .swap-glyph {
+    animation: none;
+  }
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 24px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 38px;
+  }
+
+  .how-it-works {
+    padding: 60px 24px;
+  }
+
+  .steps-track {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .step {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .step-connector {
+    display: none;
+  }
+
+  .roles-section {
+    padding: 60px 24px;
+  }
+
+  .roles-grid {
+    flex-direction: column;
+  }
+
+  .skills-section {
+    padding: 60px 24px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
