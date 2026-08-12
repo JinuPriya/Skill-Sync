@@ -17,7 +17,8 @@ const app = express()
 app.use(express.json())
 app.use(morgan("dev"))
 app.use(cors({
-    origin: "http://localhost:5173"
+    origin: ["http://localhost:5173", "https://skill-sync-2cpceu1wu-jinupriyabagga2007-8430s-projects.vercel.app"],
+    credentials: true
 }));
 app.use(express.urlencoded({ extended: true }));
 
