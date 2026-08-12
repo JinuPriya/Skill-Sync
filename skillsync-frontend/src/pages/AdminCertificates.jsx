@@ -78,7 +78,7 @@ function AdminCertificates() {
 
                                     {item.certificate ? (
                                         
-                                        <a    href={`http://localhost:3003${item.certificate}`}
+                                        <a  href={`${import.meta.env.VITE_API_URL}${item.certificate}`}
                                             target="_blank"
                                             rel="noreferrer"
                                             className="admin-cert-link"

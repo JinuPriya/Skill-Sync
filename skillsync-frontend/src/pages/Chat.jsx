@@ -199,7 +199,7 @@ function Chat() {
                                                     {msg.message && <p>{msg.message}</p>}
 
                                                     {msg.attachments && msg.attachments.map((att, i) => {
-                                                        const fileUrl = `http://localhost:3003${att.url}`;
+                                                        const fileUrl = `${import.meta.env.VITE_API_URL}${att.url}`;
                                                         const isImage = att.fileType && att.fileType.startsWith("image/");
 
                                                         if (isImage) {

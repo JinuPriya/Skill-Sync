@@ -270,7 +270,8 @@ function Profile() {
                                 </span>
                             ) : (
 
-                                <a href={`http://localhost:3003/api/google/auth?token=${localStorage.getItem("token")}`}
+                                <a href={`${import.meta.env.VITE_API_URL}/api/google/auth?
+                                    token=${localStorage.getItem("token")}`}
                                     className="secondary-button">
                                     Connect Google Calendar
                                 </a>
@@ -384,7 +385,7 @@ function Profile() {
 
                                             {item.certificate && (
 
-                                                <a href={`http://localhost:3003${item.certificate}`}
+                                                <a href={`${import.meta.env.VITE_API_URL}${item.certificate}`}
                                                     target="_blank"
                                                     rel="noreferrer"
                                                     className="certificate-link">
