@@ -270,8 +270,7 @@ function Profile() {
                                 </span>
                             ) : (
 
-                                <a href={`${import.meta.env.VITE_API_URL}/api/google/auth?
-                                    token=${localStorage.getItem("token")}`}
+                                <a href={`${import.meta.env.VITE_API_URL}/api/google/auth?token=${localStorage.getItem("token")}`}
                                     className="secondary-button">
                                     Connect Google Calendar
                                 </a>
