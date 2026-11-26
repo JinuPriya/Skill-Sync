@@ -1,6 +1,7 @@
 const User = require("../model/user.model");
 const jwt = require("jsonwebtoken");
 const {oauth2Client, GOOGLE_SCOPES} = require("../config/googleOAuth");
+const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173";
 
 const googleAuth = async (req, res, next) => {
     try {
@@ -68,9 +69,9 @@ const googleCallback = async (req, res, next) => {
 
         await user.save();
 
-        return res.redirect("http://localhost:5173/profile?google=connected");
+        return res.redirect(`${FRONTEND_URL}/profile?google=connected`);
     } catch (error) {
-        return res.redirect("http://localhost:5173/profile?google=error");
+        return res.redirect(`${FRONTEND_URL}/profile?google=error`);
     }
 };
 
