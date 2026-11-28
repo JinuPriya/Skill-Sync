@@ -7,7 +7,7 @@ fs.mkdirSync(uploadDir, { recursive: true });
 
 const storage = multer.diskStorage({
     destination: (req, res, cb) => {
-        cb(null, "public/uploads/certificates")
+        cb(null, uploadDir)
     },
 
     filename: (req, file, cb) => {
