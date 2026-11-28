@@ -1,5 +1,9 @@
 const multer = require("multer")
 const path = require("path")
+const fs = require("fs")
+
+const uploadDir = path.join("public", "uploads", "certificates");
+fs.mkdirSync(uploadDir, { recursive: true });
 
 const storage = multer.diskStorage({
     destination: (req, res, cb) => {
@@ -30,7 +34,7 @@ const fileFilter = (req, file, cb) => {
         cb(null, true)
     } 
     else{
-        cb(new Error("Only JPG, PNG and PDF files are allowed.", false))
+        cb(new Error("Only JPG, PNG and PDF files are allowed."), false)
     }
 }
 
